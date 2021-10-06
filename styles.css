@@ -1,0 +1,33 @@
+/* Styles for the main pages */
+
+/* Global */
+h1, h2, h3, h4, h5, h6, ol, li, body, html, a{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: none;
+    color: black;
+}
+
+/* Header and navigation */
+#header{
+    text-align: center;
+    margin:auto;
+}
+
+nav {
+    margin: 1em;
+}
+ol {
+    display: flex;
+    justify-content: center;
+}
+nav ol li {
+    flex: 1;
+}
+
+
+
