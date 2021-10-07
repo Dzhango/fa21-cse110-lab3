@@ -1,33 +1,138 @@
 /* Styles for the main pages */
-
+/* #d72631, #a2d5c6, #077b8a and #5c3c92 
+   Red,     sea-foam  jade      violet
+*/
 /* Global */
-h1, h2, h3, h4, h5, h6, ol, li, body, html, a{
+* {
     margin: 0;
     padding: 0;
+}
+h1, h2, h3, h4, h5, h6, ol, li, body, html, a, p{
     list-style-type: none;
     text-decoration: none;
     font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Audiowide", sans-serif;
     text-transform: none;
-    color: black;
+    color: rgb(248,248,248);
 }
 
 /* Header and navigation */
+body {
+    background-color: #5c3c92;
+}
 #header{
+    position: relative;
+    top: 0;
+    text-decoration: underline;
     text-align: center;
     margin:auto;
+    padding: 1em;
 }
 
 nav {
-    margin: 1em;
+    /* max-width: 1115px; */
+    background-color: hsl(187, 90%, 28%);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
 }
 ol {
     display: flex;
+    justify-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 nav ol li {
     flex: 1;
+    text-align: center;
+    padding: 1em;
+    border: 1px white solid;
+    border-radius: 1em;
+    margin: 5px
+}
+summary ~ p {
+    text-transform: capitalize;
+}
+a:hover {
+    color: red
+}
+a:active {
+    color: goldenrod
+}
+img[src="https://i.pinimg.com/736x/fd/45/e1/fd45e1fde76b97b84ef8ef5273f79de6.jpg"] {
+    /* transform-origin: 0%; */
+}
+#video-container{
+    display: flex;
+    justify-content: center;
+    margin: 20px 20px 20px 20px;
+}
+video {
+    max-width: 100%;
+    padding: 1em 1em 1em 1em;
+    margin: auto;
 }
 
+/* MAIN */
+.main-container{
+    padding: 1em;
+    margin: 1em;
+    border: hsl(187, 90%, 28%) solid 5px;
+    border-radius: 2em;
+}
+.main-container.text{
+    text-shadow: hsl(187, 90%, 28%);
+}
+div.text {
+    text-indent: 1%;
+}
 
+section{
+    margin: 1em;
+}
+summary {
+    color: red;
+    font-size: 30px;
+}
 
+summary + p {
+    font-weight: 700;
+}
+
+details > p {
+    font-size: 24px;
+}
+
+.gif-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 1em;
+    padding: 1em;
+    grid-gap: 1em;
+    grid-template: auto;
+}
+.gif-container img {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    #video-container{
+        display: none;
+    }
+    .gif-container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: 1em;
+        
+    }
+}
